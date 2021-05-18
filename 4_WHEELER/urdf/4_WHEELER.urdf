@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="4_WHEELER">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0375 0.0168979568692043 -0.05"
+        rpy="0 0 0" />
+      <mass
+        value="0.563205630345987" />
+      <inertia
+        ixx="0.00117384279611469"
+        ixy="1.53653099876935E-20"
+        ixz="-9.99854565423472E-20"
+        iyy="0.00132140486649909"
+        iyz="-3.76039599495508E-20"
+        izz="0.000382342529746245" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4_WHEELER/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4_WHEELER/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_right_link">
+    <inertial>
+      <origin
+        xyz="0.0150232018561485 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.084626652106075" />
+      <inertia
+        ixx="3.81697371488008E-05"
+        ixy="1.15941736867104E-37"
+        ixz="-1.38810202635159E-24"
+        iyy="2.54252769409231E-05"
+        iyz="1.06543524839393E-40"
+        izz="2.54252769409231E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4_WHEELER/meshes/front_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4_WHEELER/meshes/front_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.1"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_link" />
+    <axis
+      xyz="1 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="back_right_link">
+    <inertial>
+      <origin
+        xyz="0.0150232018561485 1.73472347597681E-18 6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.084626652106075" />
+      <inertia
+        ixx="3.81697371488008E-05"
+        ixy="-7.40219872782327E-38"
+        ixz="7.0944970673424E-24"
+        iyy="2.54252769409231E-05"
+        iyz="2.64481672201997E-40"
+        izz="2.54252769409231E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4_WHEELER/meshes/back_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4_WHEELER/meshes/back_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_right_link" />
+    <axis
+      xyz="1 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="front_left_link">
+    <inertial>
+      <origin
+        xyz="0.0150232018561485 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.084626652106075" />
+      <inertia
+        ixx="3.81697371488008E-05"
+        ixy="-8.60957776481168E-38"
+        ixz="8.66046310517944E-24"
+        iyy="2.5425276940923E-05"
+        iyz="2.95137923266854E-38"
+        izz="2.5425276940923E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4_WHEELER/meshes/front_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4_WHEELER/meshes/front_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.075 0 -0.1"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_link" />
+    <axis
+      xyz="-1 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+  <link
+    name="back_left_link">
+    <inertial>
+      <origin
+        xyz="0.0150232018561485 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.084626652106075" />
+      <inertia
+        ixx="3.81697371488008E-05"
+        ixy="-8.39433832069138E-38"
+        ixz="7.84265519175547E-24"
+        iyy="2.5425276940923E-05"
+        iyz="-8.35361953230723E-38"
+        izz="2.5425276940923E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4_WHEELER/meshes/back_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4_WHEELER/meshes/back_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.075 0 0"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_left_link" />
+    <axis
+      xyz="-1 0 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+
+ <gazebo>
+    <plugin name="4_WHELLER_controller" filename="libgazebo_ros_diff_drive.so">
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometrySource>world</odometrySource>
+      <publishOdomTF>true</publishOdomTF>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <publishWheelTF>false</publishWheelTF>
+      <publishTf>true</publishTf>
+      <publishWheelJointState>true</publishWheelJointState>
+      <legacyMode>false</legacyMode>
+      <updateRate>30</updateRate>
+      <leftJoint>front_left_joint</leftJoint>
+      <rightJoint>front_right_joint</rightJoint>
+      <wheelSeparation>0.287</wheelSeparation>
+      <wheelDiameter>0.066</wheelDiameter>
+      <wheelAcceleration>1</wheelAcceleration>
+      <wheelTorque>10</wheelTorque>
+      <rosDebugLevel>na</rosDebugLevel>
+    </plugin>
+  </gazebo>
+
+
+</robot>
